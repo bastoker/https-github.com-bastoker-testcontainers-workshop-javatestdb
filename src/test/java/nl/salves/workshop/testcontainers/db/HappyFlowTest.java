@@ -1,6 +1,5 @@
 package nl.salves.workshop.testcontainers.db;
 
-import nl.salves.workshop.testcontainers.fixture.PlaywrightPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.containers.GenericContainer;
@@ -20,19 +19,9 @@ public class HappyFlowTest {
     @BeforeAll
     static void setup() {
         website.start();
-        PlaywrightPage.instantiate();
     }
 
     @Test
-    void paginaWordtWeergegeven() {
-        getPage().navigate("http://" + website.getHost() + ':' + website.getFirstMappedPort());
-
-        assertThat(getPage().getByText("Docker-101")).isVisible();
-    }
-
-    @Test
-    void mijnEigenTekstWordtGoedWeergegeven() {
-       // Maak hier je eigen test
-
+    void gegevensOphalenIsSuccesvol() {
     }
 }

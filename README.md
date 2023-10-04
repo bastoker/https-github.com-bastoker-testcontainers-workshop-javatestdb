@@ -25,20 +25,7 @@ Als je je IDE hebt opgestart kan je de bestaande test openen in
 De opdracht is om een testgeval te maken voor de verwijder-flow van de App.
 Er is een HTTP endpoint waarmee vakanties verwijderd kunnen worden uit de Vakantieplanner. Hiervoor moet nog een test gemaakt worden.
 
-In de JavaTest zijn Testcontainers en Playwright al geconfigureerd.
-De Testcontainer is geconfigureerd om een container te starten o.b.v. de Image die we in de vorige opdracht zelf gebouwd hebben.
-De Playwright fixture start playwright zelf op en geeft aan hoe we weten dat de container is opgestart.
-
-## Dynamische poorten
-De netwerkpoorten waarop we de testcontainers kunnen benaderen zijn altijd dynamisch.
-Testcontainers doet dit om zo altijd een stabiele testomgeving te bieden, want op een PC of Build Pipeline zijn bepaalde poorten
-nu eenmaal al bezet. Testcontainers lost dit probleem dus op door altijd dynamisch een vrije poort te kiezen.
-
-De API van Testcontainers biedt de mogelijkheid deze poort op te vragen, zodat we Playwright naar het juiste adres kunnen sturen
-om onze applicatie te openen in een browser.
-
-Als de container is gestart en Playwright ook een browser heeft geopend, is de testopzet klaar en kunnen we onze
-concrete testgevallen gaan werken. Als voorbeeld is er al 1 test geimplementeerd, die een bepaalde tekst opzoekt op de website.
+In de testopzet van beide unittests zijn Testcontainers en het starten van de applicatie al geconfigureerd.
 
 ## Afronden opdracht
 Rond deze opdracht af door een of meer slagende testcases toe te voegen aan de ``VerwijderenTest`` class.
