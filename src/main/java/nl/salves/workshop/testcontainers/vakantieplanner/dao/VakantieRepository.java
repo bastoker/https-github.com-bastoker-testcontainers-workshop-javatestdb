@@ -33,7 +33,7 @@ public class VakantieRepository {
     private static Logger logger = LoggerFactory.getLogger(HolidayController.class);
 
     @Autowired
-    VakantieRepository(DSLContext dslContext) {
+    public VakantieRepository(DSLContext dslContext) {
         this.create = dslContext;
     }
 

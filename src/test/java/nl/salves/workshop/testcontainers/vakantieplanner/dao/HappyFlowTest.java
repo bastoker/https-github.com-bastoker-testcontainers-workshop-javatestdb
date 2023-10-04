@@ -1,10 +1,11 @@
-package nl.salves.workshop.testcontainers.vakantieplanner.db;
+package nl.salves.workshop.testcontainers.vakantieplanner.dao;
 
-import nl.salves.workshop.testcontainers.vakantieplanner.dao.VakantieRepository;
 import nl.salves.workshop.testcontainers.vakantieplanner.model.Holiday;
+import org.jooq.DSLContext;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jooq.JooqTest;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.PostgreSQLContainer;
@@ -15,6 +16,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @JooqTest
+@ComponentScan(basePackages = {"nl.salves.workshop.testcontainers.vakantieplanner.dao"})
 public class HappyFlowTest {
 
     private static PostgreSQLContainer<?> postgres =
