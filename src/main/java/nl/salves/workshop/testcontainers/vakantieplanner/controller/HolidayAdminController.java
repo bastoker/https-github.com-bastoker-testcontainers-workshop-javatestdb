@@ -1,6 +1,5 @@
 package nl.salves.workshop.testcontainers.vakantieplanner.controller;
 
-import io.swagger.v3.oas.annotations.Parameter;
 import nl.salves.workshop.testcontainers.vakantieplanner.dao.VakantieRepository;
 import nl.salves.workshop.testcontainers.vakantieplanner.model.MemberWithHolidays;
 import org.slf4j.Logger;

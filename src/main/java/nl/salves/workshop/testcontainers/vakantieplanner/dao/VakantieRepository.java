@@ -135,7 +135,7 @@ public class VakantieRepository {
         });
     }
 
-    boolean checkIfHolidayIsPossible(LocalDate from, LocalDate to) {
+    public boolean checkIfHolidayIsPossible(LocalDate from, LocalDate to) {
         String sql = """
                         SELECT
                         (holiday.start_date, holiday.end_date)
